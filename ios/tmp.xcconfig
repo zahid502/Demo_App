@@ -1,0 +1,5 @@
+BASE_URL_AUTH=https:/$()/auth-service-dev.gepcash.com
+BASE_URL_USER=https:/$()/user-service-dev.gepcash.com
+BASE_URL_SUBSCRIPTION=https:/$()/subscription-service-dev.gepcash.com
+STRIPE_PUBLISHABLE_KEY=pk_test_51Qo9uMRMa1zrhYCshGBXjZY6mQRt1LwdmbAprMrBBn8Cbv7nBgLVdmYfVIj68yg5GzJCJgQlyOy0XUdVwAdpU3ME002jyCWHAY
+PRODUCTION=false
