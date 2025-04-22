@@ -1,3 +1,28 @@
+# Note
+
+Features
+✅ Vector Icons – Integrated with react-native-vector-icons for a wide range of scalable icons.
+
+🌗 Dark & Light Theme Support – Seamless UI theme toggling using context or theming libraries.
+
+🌎 Environment Configuration – Environment-based settings (e.g., API URLs, keys) handled using .env files with support for multiple environments.
+
+🧪 Build Flavors – Added support for flavors (e.g., dev, staging, production) to streamline builds for different environments.
+
+📶 Net Info – Integrated @react-native-community/netinfo to monitor and handle internet connectivity changes.
+
+🖼️ SVG Support – Used react-native-svg and react-native-svg-transformer for rendering SVG assets.
+
+📂 Drawer Navigation – Navigation drawer implemented using @react-navigation/drawer.
+
+📥 Bottom Sheet & Navigation – Integrated @gorhom/bottom-sheet for dynamic bottom sheet components.
+
+📱 Bottom Tabs – Navigation between major screens via bottom tab navigation using @react-navigation/bottom-tabs.
+
+🔐 Authentication – Login, signup, and session handling implemented with secure token storage.
+
+🌐 API Services – Centralized API service layer with support for RESTful API calls using axios.
+
 # cross-platform
 
 ## Getting started
