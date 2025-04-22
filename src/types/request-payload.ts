@@ -9,3 +9,5 @@ export type RegisterUserPayload = {
   email: string;
   password: string;
 };
+
+export type MoviesListPayload = {};

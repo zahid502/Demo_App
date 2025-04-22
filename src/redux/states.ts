@@ -1,4 +1,4 @@
-import {User} from '@app-types';
+import {Movie, User} from '@app-types';
 
 export type BaseState<T> = {
   message: string;
@@ -30,3 +30,11 @@ export type AuthState = BaseState<User> & {
 };
 
 export type RegisterUserState = BaseState<any> & {};
+export type MoviesListState = {
+  loading: boolean;
+  data: Array<any>;
+};
+
+export type FavoritesState = {
+  data: Array<Movie>;
+};

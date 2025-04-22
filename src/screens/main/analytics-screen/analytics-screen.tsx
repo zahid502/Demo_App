@@ -2,7 +2,7 @@ import {MainHeader} from '@components';
 import {ScreenEnum} from '@constants';
 import {useTheme} from '@hooks/use-theme';
 import React, {useMemo} from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import createStyles from './styles';
 
 const AnalyticsScreen = () => {

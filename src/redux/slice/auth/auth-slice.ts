@@ -1,24 +1,23 @@
 import {AuthenticateUserPayload} from '@app-types';
 import {strings} from '@constants';
-import {User} from '@domain-models';
 import {UserDtoMapper} from '@mappers';
 import {AuthState, RejectState} from '@redux/states';
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {AuthenticateUserResponse, ErrorResponse} from '@responses';
-import {ApiService, PrefManager} from '@services';
+import {AuthApiService, PrefManager} from '@services';
 
 //---------------------------------------
 const userDtoMapper = new UserDtoMapper();
 //---------------------------------------
 
 export const authenticateUser = createAsyncThunk<
-  User | undefined,
+  any,
   AuthenticateUserPayload,
   RejectState
 >(
   'authenticateUser',
   async (payload: AuthenticateUserPayload, {rejectWithValue, dispatch}) => {
-    const response = await ApiService.getInstance()
+    const response = await AuthApiService.getInstance()
       .safeApiCall<AuthenticateUserPayload, AuthenticateUserResponse>(
         payload,
         'authenticateUser',

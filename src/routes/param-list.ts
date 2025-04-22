@@ -1,3 +1,4 @@
+import {Movie} from '@app-types';
 import {RouteProp} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
@@ -18,7 +19,7 @@ export type AuthNavigationProp<T extends keyof AuthNavParamList> =
 //------------------------------
 export type MainNavParamList = {
   BottomTabNav: undefined;
-  Favorite: undefined;
+  MovieDetails: {movie: Movie};
 };
 
 export type MainRouteProp<T extends keyof MainNavParamList> = RouteProp<
@@ -33,7 +34,7 @@ export type MainNavigationProp<T extends keyof MainNavParamList> =
 export type BottomTabsNavParamList = {
   Home: undefined;
   Analytics: undefined;
-  Subscriptions: undefined;
+  Favourites: undefined;
   Profile: undefined;
 };
 

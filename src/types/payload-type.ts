@@ -1,3 +1,10 @@
-import {AuthenticateUserPayload, RegisterUserPayload} from './request-payload';
+import {
+  AuthenticateUserPayload,
+  MoviesListPayload,
+  RegisterUserPayload,
+} from './request-payload';
 
-export type PayloadType = AuthenticateUserPayload | RegisterUserPayload;
+export type PayloadType =
+  | AuthenticateUserPayload
+  | RegisterUserPayload
+  | MoviesListPayload;

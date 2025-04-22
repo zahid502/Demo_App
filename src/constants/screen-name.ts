@@ -4,6 +4,7 @@ export enum ScreenEnum {
 
   Home = 'Home',
   Analytics = 'Analytics',
-  Subscriptions = 'Subscriptions',
+  Favourites = 'Favourites',
   Profile = 'Profile',
+  MovieDetails = 'MovieDetails',
 }

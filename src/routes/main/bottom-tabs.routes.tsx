@@ -7,7 +7,7 @@ import {
   AnalyticsScreen,
   HomeScreen,
   ProfileScreen,
-  SubscriptionsScreen,
+  FavouritesScreen,
 } from '@screens';
 import React, {useMemo} from 'react';
 import {Platform, SafeAreaView, StyleSheet, View} from 'react-native';
@@ -45,7 +45,16 @@ const BottomTabNav: React.FC<IProps> = () => {
                   <Images.HOME />
                 );
               }
-
+              case ScreenEnum.Favourites: {
+                return focused ? (
+                  <>
+                    <View style={styles.activeBar} />
+                    <Images.CREDIT_CARD_ACTIVE />
+                  </>
+                ) : (
+                  <Images.CREDIT_CARD />
+                );
+              }
               case ScreenEnum.Analytics: {
                 return focused ? (
                   <>
@@ -54,16 +63,6 @@ const BottomTabNav: React.FC<IProps> = () => {
                   </>
                 ) : (
                   <Images.PIE_CHART />
-                );
-              }
-              case ScreenEnum.Subscriptions: {
-                return focused ? (
-                  <>
-                    <View style={styles.activeBar} />
-                    <Images.CREDIT_CARD_ACTIVE />
-                  </>
-                ) : (
-                  <Images.CREDIT_CARD />
                 );
               }
               case ScreenEnum.Profile: {
@@ -80,11 +79,8 @@ const BottomTabNav: React.FC<IProps> = () => {
           },
         })}>
         <Screen name={ScreenEnum.Home} component={HomeScreen} />
+        <Screen name={ScreenEnum.Favourites} component={FavouritesScreen} />
         <Screen name={ScreenEnum.Analytics} component={AnalyticsScreen} />
-        <Screen
-          name={ScreenEnum.Subscriptions}
-          component={SubscriptionsScreen}
-        />
         <Screen name={ScreenEnum.Profile} component={ProfileScreen} />
       </Navigator>
     </>

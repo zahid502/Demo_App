@@ -5,7 +5,7 @@ import {UserDtoMapper} from '@mappers';
 import {RegisterUserState, RejectState} from '@redux/states';
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {ErrorResponse, RegisterUserResponse} from '@responses';
-import {ApiService} from '@services';
+import {AuthApiService} from '@services';
 import {goBack} from '../../../../root-navigation';
 import {setToastMessage} from '../common/toast-slice';
 
@@ -20,7 +20,7 @@ export const registerUser = createAsyncThunk<
 >(
   'registerUser',
   async (payload: RegisterUserPayload, {rejectWithValue, dispatch}) => {
-    const response = await ApiService.getInstance()
+    const response = await AuthApiService.getInstance()
       .safeApiCall<RegisterUserPayload, RegisterUserResponse>(
         payload,
         'registerUser',

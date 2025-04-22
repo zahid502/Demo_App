@@ -81,10 +81,8 @@ const SignInScreen = memo(({message, error, loading}: IProps) => {
 
             <Formik
               initialValues={{
-                // email: '',
-                // password: '',
-                email: 'eve.holt@reqres.in',
-                password: 'cityslicka',
+                email: '',
+                password: '',
               }}
               validationSchema={yupSchemas.signInSchema}
               onSubmit={handleSignIn}>

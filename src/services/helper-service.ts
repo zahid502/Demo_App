@@ -4,6 +4,7 @@ import {setCurrentUser} from '@redux/slice/auth/auth-slice';
 import {clearRegisterUserState} from '@redux/slice/auth/register-user-slice';
 import {setIsConnected} from '@redux/slice/common/net-info-slice';
 import {setToastMessage} from '@redux/slice/common/toast-slice';
+import {clearMoviesListState} from '@redux/slice/main/movies-list-slice';
 import store from '@redux/store';
 import {PrefManager} from '@services';
 import {showMessage} from 'react-native-flash-message';
@@ -26,6 +27,8 @@ export class HelperService {
 
     dispatch(setCurrentUser(null));
     dispatch(clearRegisterUserState());
+    dispatch(clearMoviesListState());
+
     PrefManager.clearKey('accessToken');
   };
 
